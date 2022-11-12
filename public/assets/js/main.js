@@ -62,3 +62,5 @@ fetch("https://breakingbadapi.com/api/characters", {
 
     renderAllCards(characters);
   });
+
+//# sourceMappingURL=main.js.map
