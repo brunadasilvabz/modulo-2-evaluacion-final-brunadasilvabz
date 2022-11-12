@@ -58,4 +58,110 @@ table {
   border-collapse: collapse;
   border-spacing: 0; }
 
+.body {
+  height: 100vh; }
+
+.header {
+  height: 150px;
+  background-image: url("https://images8.alphacoders.com/698/698914.jpg");
+  background-size: cover;
+  background-position: center;
+  position: relative; }
+  @media all and (min-width: 768px) {
+    .header {
+      height: 200px; } }
+  @media all and (min-width: 1024px) {
+    .header {
+      height: 280px; } }
+  .header__form {
+    display: flex;
+    position: absolute;
+    bottom: -15px;
+    right: 40px;
+    gap: 15px; }
+    @media all and (min-width: 768px) {
+      .header__form {
+        bottom: -20px;
+        right: 25%;
+        gap: 20px; } }
+    @media all and (min-width: 1024px) {
+      .header__form {
+        bottom: -30px;
+        right: 20%;
+        gap: 20px; } }
+    .header__form--input {
+      height: 30px;
+      width: 150px; }
+      @media all and (min-width: 768px) {
+        .header__form--input {
+          height: 45px;
+          width: 300px; } }
+      @media all and (min-width: 1024px) {
+        .header__form--input {
+          width: 500px;
+          height: 60px; } }
+    .header__form--button {
+      height: 30px;
+      width: 80px; }
+      @media all and (min-width: 768px) {
+        .header__form--button {
+          height: 45px;
+          width: 100px; } }
+      @media all and (min-width: 1024px) {
+        .header__form--button {
+          height: 60px;
+          width: 150px; } }
+
+.hidden {
+  display: none; }
+
+.page {
+  display: flex;
+  flex-direction: column;
+  align-items: center; }
+  @media all and (min-width: 768px) {
+    .page {
+      flex-direction: row; } }
+
+.aside {
+  width: 30%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 0 20px 0 20px; }
+  .aside__title {
+    padding: 40px;
+    font-size: 25px; }
+
+.main {
+  width: 70%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 0 20px 0 20px; }
+  .main__title {
+    padding: 40px;
+    font-size: 25px; }
+
+.cardsList {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 60px; }
+
+.listElement {
+  height: 395px;
+  width: 225px;
+  background-color: rgba(243, 155, 23, 0.705); }
+  .listElement__article {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 25px; }
+    .listElement__article--img {
+      height: 275px;
+      width: 200px; }
+    .listElement__article--name {
+      font-size: 20px; }
+
 /*# sourceMappingURL=main.css.map */
