@@ -121,7 +121,8 @@ table {
   align-items: center; }
   @media all and (min-width: 768px) {
     .page {
-      flex-direction: row; } }
+      flex-direction: row;
+      align-items: flex-start; } }
 
 .aside {
   width: 30%;
@@ -163,5 +164,8 @@ table {
       width: 200px; }
     .listElement__article--name {
       font-size: 20px; }
+
+.selected {
+  background-color: blue; }
 
 /*# sourceMappingURL=main.css.map */
