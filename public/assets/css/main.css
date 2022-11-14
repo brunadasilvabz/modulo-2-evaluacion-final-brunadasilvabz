@@ -61,6 +61,9 @@ table {
 .body {
   height: 100vh; }
 
+.holi {
+  background-color: red; }
+
 .header {
   height: 150px;
   background-image: url("https://images8.alphacoders.com/698/698914.jpg");
