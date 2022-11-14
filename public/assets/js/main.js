@@ -8,6 +8,9 @@ const favCardList = document.querySelector(".js-favList");
 const searchInput = document.querySelector(".js-input");
 const searchBtn = document.querySelector(".js-button");
 
+const favToggle = document.querySelector(".js-favToggle");
+const favSection = document.querySelector(".js-favSection");
+
 //---------VARIABLES GLOBALES -> VARIABLES CON DATOS DE LA APP-----------
 
 let characters = [];
@@ -18,13 +21,13 @@ let favCharacters = [];
 function renderOneCard(oneCharacterCard, domElement) {
   //DOM AVANZADO PARA PINTAR LAS TARJETAS
 
-  console.log(favCharacters);
+  //console.log(favCharacters);
 
   const cardsInFavListIndex = favCharacters.findIndex(
     (eachCardObj) => eachCardObj.char_id === oneCharacterCard.char_id
   );
-  console.log(cardsInFavListIndex);
-  console.log(oneCharacterCard.char_id);
+  //console.log(cardsInFavListIndex);
+  //console.log(oneCharacterCard.char_id);
   let classFavorite = "";
 
   if (cardsInFavListIndex === -1) {
@@ -38,7 +41,10 @@ function renderOneCard(oneCharacterCard, domElement) {
 
   const articleElement = document.createElement("article");
 
-  articleElement.setAttribute("class", `js-articleElement ${classFavorite}`);
+  articleElement.setAttribute(
+    "class",
+    `js-articleElement listElement__article ${classFavorite}`
+  );
   articleElement.setAttribute("id", `${oneCharacterCard.char_id}`);
 
   const imageElement = document.createElement("img");
@@ -73,7 +79,7 @@ function renderAllCards(cards) {
   for (const card of cards) {
     renderOneCard(card, cardList);
   }
-  console.log(cards);
+  //console.log(cards);
   addListListeners();
 }
 
@@ -136,13 +142,13 @@ function handleClickFavCard(event) {
 function handleClickSearchCard(event) {
   event.preventDefault();
   const userSearch = searchInput.value;
-  console.log(searchInput.value);
+  //console.log(searchInput.value);
 
   const filteredCharacters = characters.filter((eachCharacter) =>
     eachCharacter.name.toLowerCase().includes(userSearch)
   );
 
-  console.log(filteredCharacters);
+  //console.log(filteredCharacters);
 
   renderAllCards(filteredCharacters); //no pinta
 }

@@ -11,26 +11,28 @@
 
 <body class="body">
   <header class="header">
-    <fieldset>
-      <form class="header__form" action="">
-        <input class="js-input header__form--input" type="text" placeholder="Example: Walter White">
-        <button class="js-button header__form--button">Search</button>
+    <fieldset class="fieldset">
+      <form class="fieldset__form">
+        <input class="js-input fieldset__form--input" type="text" placeholder="Example: Walter White">
+        <button class="js-button fieldset__form--button">Search</button>
       </form>
     </fieldset>
   </header>
-  <div class="page">
-    <aside class="aside">
-      <h2 class="aside__title">Favorites</h2>
-      <ul class="js-favList"></ul>
-    </aside>
 
-    <main class="main">
-      <h1 class="main__title">Characters</h1>
-      <div>
-        <ul class="js-cardList cardsList"></ul>
-      </div>
-    </main>
-  </div>
+  <main class="main">
+
+    <section class="favSection">
+      <h2 class="favSection__title">Favorites</h2>
+      <ul class="js-favList favSection__favList"></ul>
+    </section>
+
+    <section class="allSection">
+      <h1 class="allSection__title">Characters</h1>
+      <ul class="js-cardList allSection__cardsList"></ul>
+    </section>
+
+  </main>
+
 
   <footer class="footer">
     <p class="footer__text">Breaking Bad is regarded as one of the greatest television series of all time, with 16

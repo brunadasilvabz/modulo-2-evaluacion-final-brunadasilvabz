@@ -7,151 +7,16 @@
 @import 'layout/footer';
 @import 'pages/index'; */
 
+@import 'core/variables';
 @import 'core/reset';
+@import 'pages/index';
 
-.body {
-    height: 100vh;
-}
-
-.prueba{
-    background-color: red;
-}
-.header {
-    height: 150px;
-    background-image: url("https://images8.alphacoders.com/698/698914.jpg");
-    background-size: cover;
-    background-position: center;
-    position: relative;
-
-    @media all and (min-width:768px) {
-        height: 200px;
-    }
-
-    @media all and (min-width:1024px) {
-        height: 280px;
-    }
-
-    &__form {
-        display: flex;
-        position: absolute;
-        bottom: -15px;
-        right: 40px;
-        gap: 15px;
-
-        @media all and (min-width:768px) {
-            bottom: -20px;
-            right: 25%;
-            gap: 20px;
-        }
-
-        @media all and (min-width:1024px) {
-            bottom: -30px;
-            right: 20%;
-            gap: 20px;
-        }
-        
-        &--input {
-            height: 30px;
-            width: 150px;
-            @media all and (min-width:768px) {
-                height: 45px;
-                width: 300px;
-                
-            }
-           
-            @media all and (min-width:1024px) {
-                width: 500px;
-                height: 60px;
-           }
-        }
-
-        &--button {
-            height: 30px;
-            width: 80px;
-            @media all and (min-width:768px) {
-                height: 45px;
-                width: 100px;
-            }
-
-            @media all and (min-width:1024px) {
-                height: 60px;
-                width: 150px;
-           }
-            
-        } 
-    }
-}
-
-
-.hidden {
-    display: none;
-}
-
-.page {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-
-    @media all and (min-width:768px) {
-        flex-direction: row;
-        align-items: flex-start;
-    }
-}
-
-.aside {
-    width: 30%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 0 20px 0 20px;
-
-    &__title {
-        padding: 40px;
-        font-size: 25px
-    }
-}
-
-.main {
-    width: 70%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 0 20px 0 20px;
-
-    &__title {
-        padding: 40px;
-        font-size: 25px;
-    }
-}
-
-.cardsList {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 60px;
-}
-
-.listElement {
-    height: 395px;
-    width: 225px;
-    background-color: rgba(243, 155, 23, 0.705);
-
-    &__article {
-        margin-top: 20px;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        gap: 25px;
-        &--img {
-            height: 275px;
-            width: 200px;
-        }
-
-        &--name {
-            font-size: 20px;
-        }
-    }
-}
+/*.selected {
+    background-color: rgba(71, 117, 30, 0.829);
+    box-shadow: rgb(219, 241, 131) 0px 1px 3px 0px, rgba(133, 138, 124, 0.919) 0px 0px 0px 1px;
+    border-radius: 15px;
+}*/
 
 .selected {
-    background-color: blue;
+    box-shadow: rgba(171, 226, 8, 0.3) 0px 19px 38px, rgba(12, 13, 3, 0.928) 0px 15px 12px;
 }
