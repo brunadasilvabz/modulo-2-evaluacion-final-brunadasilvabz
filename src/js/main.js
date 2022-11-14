@@ -18,12 +18,13 @@ let favCharacters = [];
 function renderOneCard(oneCharacterCard, domElement) {
   //DOM AVANZADO PARA PINTAR LAS TARJETAS
 
-  //console.log(favCharacters);
-  /*
-  const cardsInFavListIndex = favCharacters.findIndex(
-    (eachCardObj) => eachCardObj.char_id === oneCharacterCard.id
-  );
+  console.log(favCharacters);
 
+  const cardsInFavListIndex = favCharacters.findIndex(
+    (eachCardObj) => eachCardObj.char_id === oneCharacterCard.char_id
+  );
+  console.log(cardsInFavListIndex);
+  console.log(oneCharacterCard.char_id);
   let classFavorite = "";
 
   if (cardsInFavListIndex === -1) {
@@ -31,14 +32,13 @@ function renderOneCard(oneCharacterCard, domElement) {
   } else {
     classFavorite = "selected";
   }
-  */
+
   const liElement = document.createElement("li");
   liElement.setAttribute("class", "listElement");
 
   const articleElement = document.createElement("article");
-  //articleElement.setAttribute("class", "listElement__article");
-  //articleElement.classList.add(`${classFavorite}`);
-  articleElement.setAttribute("class", "js-articleElement `${classFavorite}`");
+
+  articleElement.setAttribute("class", `js-articleElement ${classFavorite}`);
   articleElement.setAttribute("id", `${oneCharacterCard.char_id}`);
 
   const imageElement = document.createElement("img");
@@ -73,7 +73,7 @@ function renderAllCards(cards) {
   for (const card of cards) {
     renderOneCard(card, cardList);
   }
-
+  console.log(cards);
   addListListeners();
 }
 
@@ -98,7 +98,7 @@ function addListListeners() {
 function handleClickFavCard(event) {
   //console.log("clickclickclick");
   //console.log(event);
-  event.currentTarget.classList.toggle("selected");
+  //event.currentTarget.classList.toggle("selected");
   //console.log(event.currentTarget);
 
   //console.log(event.currentTarget.id);
@@ -107,7 +107,7 @@ function handleClickFavCard(event) {
   const selectedCard = characters.find(
     (eachCardObj) => eachCardObj.char_id === parseInt(event.currentTarget.id)
   );
-  console.log(selectedCard);
+  //console.log(selectedCard);
 
   const cardsInFavListIndex = favCharacters.findIndex(
     (eachCardObj) => eachCardObj.char_id === parseInt(event.currentTarget.id)
@@ -129,6 +129,7 @@ function handleClickFavCard(event) {
   }
 
   renderFavCharacters(favCharacters);
+  renderAllCards(characters);
   //console.log(favCharacters); //se pintan duplicados
 }
 
@@ -169,7 +170,7 @@ fetch("https://breakingbadapi.com/api/characters", {
   });
 
 const savedFavorites = JSON.parse(localStorage.getItem("favorites"));
-console.log(savedFavorites);
+//console.log(savedFavorites);
 
 if (savedFavorites !== null) {
   favCharacters = savedFavorites;
