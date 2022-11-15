@@ -1,3 +1,7 @@
+:root {
+  font-family: 'Open Sans', sans-serif;
+}
+
 .header {
   height: 180px;
   background: url(../images/logo_breaking_bad.jpg);
@@ -7,11 +11,11 @@
   justify-content: center;
 
   @media all and (min-width:768px) {
-    height: 280px;
+    height: 300px;
   }
 
   @media all and (min-width:1024px) {
-    height: 340px;
+    height: 380px;
   }
 }
 
@@ -26,7 +30,7 @@
   padding: 5px 10px 5px 10px;
   align-items: center;
   border-radius: 10px;
-  box-shadow: rgb(97, 117, 16) 0px 1px 3px 0px, rgba(42, 87, 60, 0.919) 0px 0px 0px 1px;
+  box-shadow: rgb(19, 5, 4) 0px 1px 4px, rgba(186, 186, 36, 0.895) 0px 0px 0px 3px;
 
   @media all and (min-width:768px) {
     height: 55px;
@@ -43,6 +47,9 @@
     height: 30px;
     width: 160px;
     padding: 5px;
+    border-radius: 5px;
+    border-style: none;
+    font-weight: 700;
 
     @media all and (min-width:768px) {
       height: 35px;
@@ -59,15 +66,21 @@
     width: 60px;
     padding: 5px;
     margin-left: 10px;
+    border-radius: 5px;
+    border-style: none;
+    font-weight: 700;
+    color: rgb(13, 24, 4);
 
     @media all and (min-width:768px) {
       height: 35px;
       width: 100px;
+      margin-left: 20px;
     }
 
     @media all and (min-width:1024px) {
       height: 35px;
       width: 120px;
+      margin-left: 30px;
     }
   }
   
@@ -97,22 +110,30 @@
   @media all and (min-width:768px) {
     padding-top: 40px;
     width: 50%;
+  }
 
+  @media all and (min-width:1024px) {
+    padding-top: 40px;
+    width: 50%;
   }
   
 
   &__title {
+    margin-bottom: 50px;
     padding: 5px;
     font-size: rem(30);
-    background-color: rgba(186, 186, 36, 0.477);
+    font-weight: 700;
+    color: rgb(13, 24, 4);
+    background-color: rgba(186, 186, 36, 0.895);
     box-shadow: rgb(219, 241, 131) 0px 1px 3px 0px, rgba(133, 138, 124, 0.919) 0px 0px 0px 1px;
   }
 
   &__favList {
     
-    @media all and (min-width:768px) {
-      flex-direction: row;
-      flex-wrap: wrap;
+    @media all and (min-width:1024px) {
+      display: flex;
+      flex-direction: column;
+      gap: 50px;
     }
   }
 }
@@ -128,20 +149,35 @@
     width: 50%;
   }
 
+  @media all and (min-width:1024px) {
+    width: 80%;
+  }
+
   &__title {
+    margin-bottom: 50px;
     padding: 5px;
     font-size: rem(30);
-    background-color: rgba(186, 186, 36, 0.477);
+    font-weight: 700;
+    color: rgb(13, 24, 4);
+    background-color: rgba(186, 186, 36, 0.895);
     box-shadow: rgb(219, 241, 131) 0px 1px 3px 0px, rgba(133, 138, 124, 0.919) 0px 0px 0px 1px;
   }
 
   &__cardsList {
-    
+    @media all and (min-width:1024px) {
+      width: 100%;
+      display:flex;
+      justify-content: center;
+      flex-direction: row;
+      flex-wrap: wrap;
+      gap: 50px;
+    }
   }
 }
 
 .listElement {
-  margin-top: 50px;
+  //margin-top: 50px;
+  margin-bottom: 35px;
   height: 380px;
   width: 225px;
   background-color: rgba(255, 255, 46, 0.626);
@@ -167,8 +203,57 @@
     }
 
     &--status {
-      padding-bottom: 5px;
+      padding-bottom: 10px;
+      font-style: italic;
       
     }
   }
 }
+
+.footer {
+  font-size: rem(8);
+  height: 30px;
+  width: 100%;
+  padding: 10px;
+  background-color: rgba(255, 255, 46, 0.626);
+  position:fixed;
+  bottom: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+
+  @media all and (min-width:768px) {
+    font-size: rem(14);
+    line-height: 1.2;
+    height: 45px;
+    padding-left: 60px;
+    gap: 60px;
+  }
+
+  @media all and (min-width:1024px) {
+    height: 50px;
+    padding: 10px;
+  }
+
+  &__copy {
+    font-style: italic;
+    width: 35%;
+
+    @media all and (min-width:1024px) {
+      width: 10%;
+    }
+  }
+
+}
+
+  /*@media all and (min-width:768px) {
+    width: 50%;
+  }
+
+  @media all and (min-width:1024px) {
+    font-size: rem(14);
+    height: 50px;
+    width: 100%;
+  }
+}*/

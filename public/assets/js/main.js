@@ -150,7 +150,7 @@ function handleClickSearchCard(event) {
 
   //console.log(filteredCharacters);
 
-  renderAllCards(filteredCharacters); //no pinta
+  renderAllCards(filteredCharacters); //no pinta. ahora sí!
 }
 
 //--------------------------------------EVENTOS-------------------------------------
