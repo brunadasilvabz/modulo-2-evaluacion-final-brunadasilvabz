@@ -1,3 +1,5 @@
+"use strict";
+
 //-------------------------------FUNCIONES-------------------------------
 
 function renderOneCard(oneCharacterCard, domElement) {
@@ -51,15 +53,12 @@ function renderOneCard(oneCharacterCard, domElement) {
   domElement.appendChild(liElement);
 }
 
-("use strict");
-
 function renderAllCards(cards) {
   //bucle para que se pinten cada una de las tarjetas de personaje
   cardList.innerHTML = "";
   for (const card of cards) {
     renderOneCard(card, cardList);
   }
-  //console.log(cards);
   addListListeners();
 }
 

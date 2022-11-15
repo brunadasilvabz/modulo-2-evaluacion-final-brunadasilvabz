@@ -9,6 +9,7 @@ function addListListeners() {
 }
 
 function handleClickFavCard(event) {
+  //evento para seleccionar favoritos y que se guarden en el array y localStorage
   const selectedCard = characters.find(
     (eachCardObj) => eachCardObj.char_id === parseInt(event.currentTarget.id)
   );
@@ -32,5 +33,5 @@ function handleClickFavCard(event) {
 
   renderFavCharacters(favCharacters);
   renderAllCards(characters);
-  //se pintan duplicados
+  //se pintan duplicados pero lo arreglamos en el bucle
 }

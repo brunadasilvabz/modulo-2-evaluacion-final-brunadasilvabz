@@ -1,6 +1,7 @@
 "use strict";
 
 function handleClickSearchCard(event) {
+  //función para buscar los personajes por nombre y pintarlos
   event.preventDefault();
   const userSearch = searchInput.value;
 
@@ -8,7 +9,7 @@ function handleClickSearchCard(event) {
     eachCharacter.name.toLowerCase().includes(userSearch)
   );
 
-  renderAllCards(filteredCharacters); //no pinta. ahora sí!
+  renderAllCards(filteredCharacters);
 }
 
 searchBtn.addEventListener("click", handleClickSearchCard);

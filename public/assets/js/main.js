@@ -32,6 +32,8 @@ if (savedFavorites !== null) {
   renderFavCharacters(savedFavorites);
 }
 
+"use strict";
+
 //-------------------------------FUNCIONES-------------------------------
 
 function renderOneCard(oneCharacterCard, domElement) {
@@ -85,15 +87,12 @@ function renderOneCard(oneCharacterCard, domElement) {
   domElement.appendChild(liElement);
 }
 
-("use strict");
-
 function renderAllCards(cards) {
   //bucle para que se pinten cada una de las tarjetas de personaje
   cardList.innerHTML = "";
   for (const card of cards) {
     renderOneCard(card, cardList);
   }
-  //console.log(cards);
   addListListeners();
 }
 
@@ -116,6 +115,7 @@ function addListListeners() {
 }
 
 function handleClickFavCard(event) {
+  //evento para seleccionar favoritos y que se guarden en el array y localStorage
   const selectedCard = characters.find(
     (eachCardObj) => eachCardObj.char_id === parseInt(event.currentTarget.id)
   );
@@ -139,12 +139,13 @@ function handleClickFavCard(event) {
 
   renderFavCharacters(favCharacters);
   renderAllCards(characters);
-  //se pintan duplicados
+  //se pintan duplicados pero lo arreglamos en el bucle
 }
 
 "use strict";
 
 function handleClickSearchCard(event) {
+  //función para buscar los personajes por nombre y pintarlos
   event.preventDefault();
   const userSearch = searchInput.value;
 
@@ -152,12 +153,10 @@ function handleClickSearchCard(event) {
     eachCharacter.name.toLowerCase().includes(userSearch)
   );
 
-  renderAllCards(filteredCharacters); //no pinta. ahora sí!
+  renderAllCards(filteredCharacters);
 }
 
 searchBtn.addEventListener("click", handleClickSearchCard);
 
-"use strict";
-console.log("funciona?funciona");
 
 //# sourceMappingURL=main.js.map
