@@ -1,21 +1,12 @@
-/*@import 'core/variables';
-@import 'core/reset';
-@import 'components/code';
-@import 'components/links';
-@import 'layout/page';
-@import 'layout/header';
-@import 'layout/footer';
-@import 'pages/index'; */
 
 @import 'core/variables';
 @import 'core/reset';
-@import 'pages/index';
+@import 'layout/header';
+@import 'layout/main';
+@import 'layout/footer';
 
-/*.selected {
-    background-color: rgba(71, 117, 30, 0.829);
-    box-shadow: rgb(219, 241, 131) 0px 1px 3px 0px, rgba(133, 138, 124, 0.919) 0px 0px 0px 1px;
-    border-radius: 15px;
-}*/
+
+// clase que se agrega en el JS para resaltar el favorito
 
 .selected {
     box-shadow: rgba(171, 226, 8, 0.3) 0px 19px 38px, rgba(247, 253, 188, 0.928) 0px 15px 25px;

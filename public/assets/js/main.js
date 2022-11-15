@@ -1,5 +1,4 @@
 "use strict";
-console.log("funciona?funciona");
 
 //------------------------QUERYSELECTOR----------------------------------
 
@@ -8,26 +7,40 @@ const favCardList = document.querySelector(".js-favList");
 const searchInput = document.querySelector(".js-input");
 const searchBtn = document.querySelector(".js-button");
 
-const favToggle = document.querySelector(".js-favToggle");
-const favSection = document.querySelector(".js-favSection");
-
 //---------VARIABLES GLOBALES -> VARIABLES CON DATOS DE LA APP-----------
 
 let characters = [];
 let favCharacters = [];
+
+"use strict";
+
+fetch("https://breakingbadapi.com/api/characters", {
+  method: "GET",
+  headers: { "Content-Type": "application/json" },
+})
+  .then((response) => response.json())
+  .then((charactersData) => {
+    characters = charactersData;
+
+    renderAllCards(characters);
+  });
+
+const savedFavorites = JSON.parse(localStorage.getItem("favorites"));
+
+if (savedFavorites !== null) {
+  favCharacters = savedFavorites;
+  renderFavCharacters(savedFavorites);
+}
 
 //-------------------------------FUNCIONES-------------------------------
 
 function renderOneCard(oneCharacterCard, domElement) {
   //DOM AVANZADO PARA PINTAR LAS TARJETAS
 
-  //console.log(favCharacters);
-
   const cardsInFavListIndex = favCharacters.findIndex(
     (eachCardObj) => eachCardObj.char_id === oneCharacterCard.char_id
   );
-  //console.log(cardsInFavListIndex);
-  //console.log(oneCharacterCard.char_id);
+
   let classFavorite = "";
 
   if (cardsInFavListIndex === -1) {
@@ -72,7 +85,8 @@ function renderOneCard(oneCharacterCard, domElement) {
   domElement.appendChild(liElement);
 }
 
-//revisar
+("use strict");
+
 function renderAllCards(cards) {
   //bucle para que se pinten cada una de las tarjetas de personaje
   cardList.innerHTML = "";
@@ -83,7 +97,6 @@ function renderAllCards(cards) {
   addListListeners();
 }
 
-//revisar
 function renderFavCharacters(favCards) {
   //bucle para que se pinten las tarjetas favoritas
   favCardList.innerHTML = ""; //para que dejen de duplicarse las tarjetas de personajes
@@ -92,34 +105,24 @@ function renderFavCharacters(favCards) {
   }
 }
 
+"use strict";
 function addListListeners() {
   //función para crear eventos sobre todos los elementos de la lista
   const allCardElements = document.querySelectorAll(".js-articleElement");
-  //console.log(allCardElements);
+
   for (const eachCardElements of allCardElements) {
     eachCardElements.addEventListener("click", handleClickFavCard);
   }
 }
 
 function handleClickFavCard(event) {
-  //console.log("clickclickclick");
-  //console.log(event);
-  //event.currentTarget.classList.toggle("selected");
-  //console.log(event.currentTarget);
-
-  //console.log(event.currentTarget.id);
-  //console.log(characters);
-
   const selectedCard = characters.find(
     (eachCardObj) => eachCardObj.char_id === parseInt(event.currentTarget.id)
   );
-  //console.log(selectedCard);
 
   const cardsInFavListIndex = favCharacters.findIndex(
     (eachCardObj) => eachCardObj.char_id === parseInt(event.currentTarget.id)
   );
-
-  //console.log(cardsInFavListIndex);
 
   if (cardsInFavListIndex === -1) {
     console.log(favCharacters);
@@ -136,51 +139,25 @@ function handleClickFavCard(event) {
 
   renderFavCharacters(favCharacters);
   renderAllCards(characters);
-  //console.log(favCharacters); //se pintan duplicados
+  //se pintan duplicados
 }
+
+"use strict";
 
 function handleClickSearchCard(event) {
   event.preventDefault();
   const userSearch = searchInput.value;
-  //console.log(searchInput.value);
 
   const filteredCharacters = characters.filter((eachCharacter) =>
     eachCharacter.name.toLowerCase().includes(userSearch)
   );
 
-  //console.log(filteredCharacters);
-
   renderAllCards(filteredCharacters); //no pinta. ahora sí!
 }
 
-//--------------------------------------EVENTOS-------------------------------------
-
 searchBtn.addEventListener("click", handleClickSearchCard);
 
-//-------------------------------CÓDIGO QUE SE EJECUTA AL CARGAR LA PÁGINA-------------------------------
-
-//renderAllCards(characters);
-
-fetch("https://breakingbadapi.com/api/characters", {
-  method: "GET",
-  headers: { "Content-Type": "application/json" },
-})
-  .then((response) => response.json())
-  .then((charactersData) => {
-    //console.log(charactersData);
-    characters = charactersData;
-
-    //console.log(characters);
-
-    renderAllCards(characters);
-  });
-
-const savedFavorites = JSON.parse(localStorage.getItem("favorites"));
-//console.log(savedFavorites);
-
-if (savedFavorites !== null) {
-  favCharacters = savedFavorites;
-  renderFavCharacters(savedFavorites);
-}
+"use strict";
+console.log("funciona?funciona");
 
 //# sourceMappingURL=main.js.map

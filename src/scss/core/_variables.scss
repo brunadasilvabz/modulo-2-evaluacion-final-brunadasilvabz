@@ -1,8 +1,20 @@
+
 // fonts
-//$font-main: 'Roboto', sans-serif;
+
+:root {
+    font-family: 'Open Sans', sans-serif;
+}
+
 
 // colors
 
+$primary-color: rgb(13, 24, 4);
+$secondary-color: rgba(186, 186, 36, 0.895);
+$tertiaryMoreVibrant-color: rgba(255, 255, 46, 0.626);
+
+
+
+// functions used
 
 $defaultFontSize:16;
 @function rem($pixels) {

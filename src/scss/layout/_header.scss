@@ -1,5 +1,83 @@
-.page__header {
+.header {
+  height: 180px;
+  background: url(../images/logo_breaking_bad.jpg);
+  background-size: cover;
+  background-position: center;
   display: flex;
-  justify-content: space-evenly;
-  margin-bottom: 3rem;
+  justify-content: center;
+
+  @media all and (min-width:768px) {
+    height: 300px;
+  }
+
+  @media all and (min-width:1024px) {
+    height: 380px;
+  }
+}
+
+.fieldset {
+  background-color: $secondary-color;
+  height: 45px;
+  width: 80%;
+  position: relative;
+  top: 87%;
+  display: flex;
+  justify-content: center;
+  padding: 5px 10px 5px 10px;
+  align-items: center;
+  border-radius: 10px;
+  box-shadow: rgb(19, 5, 4) 0px 1px 4px, $secondary-color 0px 0px 0px 3px;
+
+  @media all and (min-width:768px) {
+    height: 55px;
+    width: 70%;
+    top: 90%
+  }
+
+  @media all and (min-width:1024px) {
+    width: 60%;
+    top: 92%
+  }
+
+  &__form--input {
+    height: 30px;
+    width: 160px;
+    padding: 5px;
+    border-radius: 5px;
+    border-style: none;
+    font-weight: 700;
+
+    @media all and (min-width:768px) {
+      height: 35px;
+      width: 300px;
+    }
+    @media all and (min-width:1024px) {
+      height: 35px;
+      width: 320px;
+    }
+  }
+
+  &__form--button {
+    height: 30px;
+    width: 60px;
+    padding: 5px;
+    margin-left: 10px;
+    border-radius: 5px;
+    border-style: none;
+    font-weight: 700;
+    color: $primary-color;
+
+    @media all and (min-width:768px) {
+      height: 35px;
+      width: 100px;
+      margin-left: 20px;
+    }
+
+    @media all and (min-width:1024px) {
+      height: 35px;
+      width: 120px;
+      margin-left: 30px;
+    }
+  }
+  
 }

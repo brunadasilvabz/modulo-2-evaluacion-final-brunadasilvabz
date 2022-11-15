@@ -1,11 +1,6 @@
-/*@import 'core/variables';
-@import 'core/reset';
-@import 'components/code';
-@import 'components/links';
-@import 'layout/page';
-@import 'layout/header';
-@import 'layout/footer';
-@import 'pages/index'; */
+:root {
+  font-family: 'Open Sans', sans-serif; }
+
 * {
   box-sizing: border-box;
   margin: 0;
@@ -15,19 +10,87 @@
    v2.0 | 20110126
    License: none (public domain)
 */
-html, body, div, span, applet, object, iframe,
-h1, h2, h3, h4, h5, h6, p, blockquote, pre,
-a, abbr, acronym, address, big, cite, code,
-del, dfn, em, img, ins, kbd, q, s, samp,
-small, strike, strong, sub, sup, tt, var,
-b, u, i, center,
-dl, dt, dd, ol, ul, li,
-fieldset, form, label, legend,
-table, caption, tbody, tfoot, thead, tr, th, td,
-article, aside, canvas, details, embed,
-figure, figcaption, footer, header, hgroup,
-menu, nav, output, ruby, section, summary,
-time, mark, audio, video {
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
   margin: 0;
   padding: 0;
   border: 0;
@@ -36,30 +99,40 @@ time, mark, audio, video {
   vertical-align: baseline; }
 
 /* HTML5 display-role reset for older browsers */
-article, aside, details, figcaption, figure,
-footer, header, hgroup, menu, nav, section {
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
   display: block; }
 
 body {
   line-height: 1; }
 
-ol, ul {
+ol,
+ul {
   list-style: none; }
 
-blockquote, q {
+blockquote,
+q {
   quotes: none; }
 
-blockquote:before, blockquote:after,
-q:before, q:after {
-  content: '';
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: "";
   content: none; }
 
 table {
   border-collapse: collapse;
   border-spacing: 0; }
-
-:root {
-  font-family: 'Open Sans', sans-serif; }
 
 .header {
   height: 180px;
@@ -161,7 +234,8 @@ table {
     font-weight: 700;
     color: #0d1804;
     background-color: rgba(186, 186, 36, 0.895);
-    box-shadow: #dbf183 0px 1px 3px 0px, rgba(133, 138, 124, 0.919) 0px 0px 0px 1px; }
+    box-shadow: #dbf183 0px 1px 3px 0px, rgba(133, 138, 124, 0.919) 0px 0px 0px 1px;
+    border-radius: 5px; }
   @media all and (min-width: 1024px) {
     .favSection__favList {
       display: flex;
@@ -186,7 +260,8 @@ table {
     font-weight: 700;
     color: #0d1804;
     background-color: rgba(186, 186, 36, 0.895);
-    box-shadow: #dbf183 0px 1px 3px 0px, rgba(133, 138, 124, 0.919) 0px 0px 0px 1px; }
+    box-shadow: #dbf183 0px 1px 3px 0px, rgba(133, 138, 124, 0.919) 0px 0px 0px 1px;
+    border-radius: 5px; }
   @media all and (min-width: 1024px) {
     .allSection__cardsList {
       width: 100%;
@@ -250,21 +325,6 @@ table {
       .footer__copy {
         width: 10%; } }
 
-/*@media all and (min-width:768px) {
-    width: 50%;
-  }
-
-  @media all and (min-width:1024px) {
-    font-size: rem(14);
-    height: 50px;
-    width: 100%;
-  }
-}*/
-/*.selected {
-    background-color: rgba(71, 117, 30, 0.829);
-    box-shadow: rgb(219, 241, 131) 0px 1px 3px 0px, rgba(133, 138, 124, 0.919) 0px 0px 0px 1px;
-    border-radius: 15px;
-}*/
 .selected {
   box-shadow: rgba(171, 226, 8, 0.3) 0px 19px 38px, rgba(247, 253, 188, 0.928) 0px 15px 25px;
   border-radius: 15px; }

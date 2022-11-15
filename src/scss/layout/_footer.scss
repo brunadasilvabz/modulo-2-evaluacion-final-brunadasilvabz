@@ -1,8 +1,36 @@
-.page__footer {
-  position: fixed;
-  left: 0;
+.footer {
+  font-size: rem(8);
+  height: 30px;
+  width: 100%;
+  padding: 10px;
+  background-color: $tertiaryMoreVibrant-color;
+  position:fixed;
   bottom: 0;
-  width: 100vw;
-  padding: 1rem;
-  color: $color-secondary;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+
+  @media all and (min-width:768px) {
+    font-size: rem(14);
+    line-height: 1.2;
+    height: 45px;
+    padding-left: 60px;
+    gap: 60px;
+  }
+
+  @media all and (min-width:1024px) {
+    height: 50px;
+    padding: 10px;
+  }
+
+  &__copy {
+    font-style: italic;
+    width: 35%;
+
+    @media all and (min-width:1024px) {
+      width: 10%;
+    }
+  }
+
 }

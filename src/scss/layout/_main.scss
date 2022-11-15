@@ -1,0 +1,124 @@
+.main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    //align-items: center;
+    padding: 50px 30px 50px 30px;
+    background-color: $primary-color;
+  
+    @media all and (min-width:768px) {
+      flex-direction: row;
+      //gap: 150px;
+    }
+  }
+  
+  .favSection {
+    padding-top: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+  
+    @media all and (min-width:768px) {
+      padding-top: 40px;
+      width: 50%;
+    }
+  
+    @media all and (min-width:1024px) {
+      padding-top: 40px;
+      width: 50%;
+    }
+    
+  
+    &__title {
+      margin-bottom: 50px;
+      padding: 5px;
+      font-size: rem(30);
+      font-weight: 700;
+      color: $primary-color;
+      background-color: $secondary-color;
+      box-shadow: rgb(219, 241, 131) 0px 1px 3px 0px, rgba(133, 138, 124, 0.919) 0px 0px 0px 1px;
+      border-radius: 5px;
+    }
+  
+    &__favList {
+      
+      @media all and (min-width:1024px) {
+        display: flex;
+        flex-direction: column;
+        gap: 50px;
+      }
+    }
+  }
+  
+  
+  .allSection {
+    padding-top: 40px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  
+    @media all and (min-width:768px) {
+      width: 50%;
+    }
+  
+    @media all and (min-width:1024px) {
+      width: 80%;
+    }
+  
+    &__title {
+      margin-bottom: 50px;
+      padding: 5px;
+      font-size: rem(30);
+      font-weight: 700;
+      color: $primary-color;
+      background-color: $secondary-color;
+      box-shadow: rgb(219, 241, 131) 0px 1px 3px 0px, rgba(133, 138, 124, 0.919) 0px 0px 0px 1px;
+      border-radius: 5px;
+    }
+  
+    &__cardsList {
+      @media all and (min-width:1024px) {
+        width: 100%;
+        display:flex;
+        justify-content: center;
+        flex-direction: row;
+        flex-wrap: wrap;
+        gap: 50px;
+      }
+    }
+  }
+  
+  .listElement {
+    margin-bottom: 35px;
+    height: 380px;
+    width: 225px;
+    background-color: $tertiaryMoreVibrant-color;
+    box-shadow: rgb(219, 241, 131) 0px 1px 3px 0px, rgba(133, 138, 124, 0.919) 0px 0px 0px 1px;
+    border-radius: 15px;
+  
+    &__article {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+  
+      &--img {
+        padding: 10px;
+        margin: 15px;
+        height: 275px;
+        width: 200px;
+        border-radius: 15px;
+      }
+  
+      &--name {
+        margin-bottom: 15px;
+        font-size: rem(25);
+      }
+  
+      &--status {
+        padding-bottom: 10px;
+        font-style: italic;
+        
+      }
+    }
+  }
