@@ -1,6 +1,6 @@
 "use strict";
 
-fetch("https://breakingbadapi.com/api/characters", {
+fetch("./assets/data/characters.json", {
   method: "GET",
   headers: { "Content-Type": "application/json" },
 })
